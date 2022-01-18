@@ -10,22 +10,22 @@ A-B間距離を横軸にとり、エネルギー値をグラフにしてくだ�
 #define FILENAME "EnergyDistance.txt"
 double U (double x);
 
-int main{
+int main(void){
 
-	double Eu[];
+	double Eu[20];
 		Eu[0]=0;
-	double Dis[];
+	double Dis[20];
 		Dis[0]=0;
 	double x=0;
 	int i = 0;
-	int k = 0;
+	int j = 0;
 
-	for(x; x<=10; x+0.5){
+	for(x=0; x<=10; x = x+0.5){
 		Eu[i] = U(x);
-		Dis[i] = x
-		i++
+		Dis[i] = x;
+		i++;
 	}
-	
+
 	FILE *fp;
 		fp = fopen(FILENAME, "w");
 		if(fp == NULL){
@@ -35,15 +35,17 @@ int main{
 		else{
 				printf("ファイルをオープンしました。\n");
 		}
-		while(k<=i){
-			fprintf(fp, "%d %llu\n",Dis[k],Eu[k]);
-			k++;
+		for(j=0; j<i; j++){
+			fprintf(fp, "%lf %lf\n",Dis[j],Eu[j]);
 		}
+
 		fclose(fp);
+
+		return 0;
 }
 
 double U (double x){
-  double Ux;
-    Ux = 0.5 * k * (pow( (x-l), 2) );
+	double Ux;
+    	Ux = 0.5 * k * (pow( (x-l), 2) );
 	return Ux;
 }
