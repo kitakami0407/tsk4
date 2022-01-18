@@ -10,17 +10,3 @@ A-B間距離を横軸にとり、エネルギー値をグラフにしてくだ�
 #define l 3.5 //自然長
 #define k 200 //バネ定数
 
-double Myu;
-  Myu = (Ma * Mb)/(Ma + Mb);
-
-double Sigma;
-  Omega = sqrt(k/Myu);
-
-int main(void){
-
-}
-
-double E(double x){
-  double Ex;
-    Ex = 0.5 * k * pow((x - l), 2)
-}
