@@ -56,8 +56,8 @@ int main(void){
   fprintf(gp, "set xlabel 'Distance[Å]' font 'Arial,24' offset 0,-1\n");
   fprintf(gp, "set ylabel 'PotentialEnergy' font 'Arial,24' offset -7,0\n");
   /*余白*/
-  fprintf(gp, "set lmargin 18\n");
-  fprintf(gp, "set bmargin 3\n");
+  fprintf(gp, "set lmargin 18\n");//y軸
+  fprintf(gp, "set bmargin 3\n");//x軸
   /*枠線*/
   fprintf(gp, "set border lw 2.5\n");
   /*サイズ*/
