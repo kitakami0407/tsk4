@@ -22,11 +22,12 @@ int main(void){
   int j = 0;
 
   for(x=0; x<=10; x = x+0.5){
-      Eu[i] = U(x);
-      Dis[i] = x;
-      i++;
+    Eu[i] = U(x);
+    Dis[i] = x;
+    i++;
     }
 
+  /*ファイルに書き込み*/
   FILE *fp;
   fp = fopen(FILENAME, "w");
   if(fp == NULL){
@@ -42,9 +43,9 @@ int main(void){
 
   fclose(fp);
 
-/*Gnuplotで描図*/
-      FILE *gp; //ファイル呼び出し
-/*Open*/
+  /*Gnuplotで描図*/
+  FILE *gp; //ファイル呼び出し
+  /*Open*/
   if ((gp = popen(GNUPLOT, "w")) == NULL) {
   fprintf(stderr, "Error: cannot open \"%s\".\n", GNUPLOT);
   exit(1);
