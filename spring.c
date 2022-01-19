@@ -50,15 +50,19 @@ int main(void){
   exit(1);
   }
   /*設定*/
+  /*目盛り*/
   fprintf(gp, "set tics nomirorr font 'Arial,20'\n");
-  fprintf(gp, "set xlabel offset 0,-1\n");
-  fprintf(gp, "set ylabel offset -7,0\n");
-  fprintf(gp, "set xlabel 'Distance[Å]' font 'Arial,24'\n");
-  fprintf(gp, "set ylabel 'PotentialEnergy' font 'Arial,24'\n");
+  /*ラベル*/
+  fprintf(gp, "set xlabel 'Distance[Å]' font 'Arial,24' offset 0,-1\n");
+  fprintf(gp, "set ylabel 'PotentialEnergy' font 'Arial,24' offset -7,0\n");
+  /*余白*/
   fprintf(gp, "set lmargin 18\n");
   fprintf(gp, "set bmargin 3\n");
+  /*枠線*/
   fprintf(gp, "set border lw 2.5\n");
+  /*サイズ*/
   fprintf(gp, "set size ratio 0.625\n");
+  /*凡例*/
   fprintf(gp, "unset key\n");
 
 
