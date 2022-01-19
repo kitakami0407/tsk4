@@ -50,7 +50,7 @@ int main(void){
   exit(1);
   }
   /*設定*/
-  fprintf(gp, "set tics font 'Arial,20'\n");
+  fprintf(gp, "set tics nomirorr font 'Arial,20'\n");
   fprintf(gp, "set xlabel offset 0,-1\n");
   fprintf(gp, "set ylabel offset -7,0\n");
   fprintf(gp, "set xlabel 'Distance[Å]' font 'Arial,24'\n");
